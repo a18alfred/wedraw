@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Var.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @apply font-montserrat font-medium focus:outline-none;
+}
+
+@layer components {
+    .btn-icon {
+        @apply flex h-7 w-7 items-center justify-center rounded-md text-xl text-white transition-all hover:scale-125 active:scale-100 disabled:opacity-25;
+    }
+
+    .btn {
+        @apply w-full bg-tertiary py-3 px-8 rounded-xl outline-none text-white font-bold hover:bg-primary;
+    }
+
+    .input {
+        @apply rounded-xl border p-5 py-1;
+    }
+
+    .overflow-overlay {
+        overflow-y: scroll;
+        overflow-y: overlay;
+    }
+}
+
+.drag {
+    cursor: grab;
+}
+
+
+.violet-gradient {
+    background: #804dee;
+    background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+    background: -webkit-linear-gradient(
+            -90deg,
+            #804dee 0%,
+            rgba(60, 51, 80, 0) 100%
+    );
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overscroll-behavior: contain;
+    cursor: default;
+    @apply bg-primary;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+html {
+    height: -webkit-fill-available;
+    @apply bg-primary;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type='range']::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.green-pink-gradient {
+    background: "#00cea8";
+    background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+    background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.tertiary-violet-gradient {
+    background-image: linear-gradient(to top, #151030, #342561, #5c3a95, #8a4eca, #bf61ff);
+}
+
+.custom-toast-content {
+    text-align: center;
+}
+
+.picker-react-colorful .react-colorful {
+    @apply gap-4 w-[230px] h-[160px] sm:h-[200px]
+}
+
+.picker-react-colorful .react-colorful__saturation {
+    border-radius: 0;
+}
+
+.picker-react-colorful .react-colorful__pointer {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.picker-react-colorful .react-colorful__last-control {
+    border-radius: 0;
+    height: 15px;
+}
+
+.picker-react-colorful .react-colorful__hue {
+    border-radius: 0;
+    height: 15px;
+}
+
+#__next,
+#portal {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+#portal {
+    z-index: 1;
+}
+
+.move-image {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+*::-webkit-scrollbar {
+    width: 6px !important;
+    position: absolute;
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply bg-tertiary;
+}
+
+

@@ -1,0 +1,1 @@
+export const halfIfZoomed = (dimension: number, zoom: number) => (dimension / 2) - (dimension / 2) * zoom;
